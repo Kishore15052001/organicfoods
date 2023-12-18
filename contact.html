@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        :root{
+    --pink:#e84393;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+section{
+    padding: 2rem 9%;
+}
+.heading{
+    text-align: center;
+    font-size: 4rem;
+    color: #333;
+    padding: 1rem;
+    margin: 2rem 0;
+    margin-top: 80px;
+    background: rgba(255,51,153,.05);
+}
+.heading span{
+    color: var(--pink);
+}
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    background: #333;
+    color: #fff;
+    padding: .9rem 3.5rem;
+    cursor: pointer;
+    font-size: 1.7rem;
+}
+.btn:hover{
+    background: var(--pink);
+}
+header{
+    position: fixed;
+    top:0; left:0; right:0;
+    background: #fff;
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+header .logo{
+    font-size: 3rem;
+    color: #333;
+    font-weight: bolder;
+}
+header .logo span{
+    color:var(--pink);
+}
+header .navbar a{
+    font-size: 2rem;
+    padding: 0 1.5rem;
+    color: #666;
+}
+header .navbar a:hover{
+    color: var(--pink);
+}
+header .icons a{
+    font-size: 2.5rem;
+    color: #333;
+    margin-left: 1.5rem;
+}
+header .icons a:hover{
+    color: var(--pink);
+}
+header #toggler{
+    display: none;
+}
+header .fa-bars{
+    font-size: 3rem;
+    color: #333;
+    border-radius: .5rem;
+    padding: 5rem 1.5rem;
+    cursor: pointer;
+    border: 1rem solid rgba(0,0,0,.3);
+    display: none;
+}
+        .contact .row{
+            display: flex;
+            flex-wrap: wrap-reverse;
+            gap: 1.5rem;
+            align-items: center;
+        }
+        .contact .row form{
+            flex: 1 1 40rem;
+            padding: 2rem 2.5rem;
+            box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+            border: 1rem solid rgba(0,0,0,.1);
+            background: #fff;
+            border-radius: 5rem;
+        }
+        .contact .row .image{
+            flex: 1 1 40rem;
+        }
+        .contact .row .image img{
+            width: 100%;
+        }
+        .contact .row form .box{
+            padding: 1rem;
+            font-size: 1.7rem;
+            color: #333;
+            text-transform: none;
+            border: 1rem solid rgba(0,0,0,.1);
+            border-radius: .5rem;
+            margin:.7rem 0;
+            width: 100%;
+        }
+        .contact .row form .box:focus{
+            border-color: lime;
+        }
+        .contact .row form textarea{
+            height: 15rem;
+            resize: none;
+        }
+
+.popup{
+width: 400px;
+background: wheat;
+border-radius: 6px;
+position: absolute;
+top: 0%;
+left: 50%;
+transform: translate(-50%,-50%) scale(0.1);
+text-align: center;
+padding: 0 30px 30px;
+color: #333;
+visibility: hidden;
+transition: transform 0.4s, top 0.4s;
+}
+
+.open-popup{
+visibility: visible;
+top: 50%;
+transform: translate(-50%,-50%) scale(1);
+
+}
+.popup img{
+width: 100px;
+margin-top: -50px;
+border-radius: 50%;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.popup h2{
+font-size: 38px;
+font-weight: 500;
+margin: 30px 0 10px;
+}
+.popup button{
+width: 100%;
+margin-top: 50px;
+padding: 10px 0;
+background: #6fd649;
+color: white;
+border: 0;
+outline: none;
+font-size: 18px;
+border-radius: 4px;
+cursor: pointer;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+    <title>Contact</title>
+</head>
+<body>
+    <header>
+        <input type="checkbox" name="" id="toggler">
+        <label for="toggler" class="fa-solid fa-bars"></label>
+
+        <a href="#" class="logo">Organic<span>.</span></a>
+
+        <nav class="navbar">
+            <a href="Organicfoods.html">home</a>
+            <a href="about us.html">about</a>
+            <a href="products.html">products</a>
+            <a href="review.html">review</a>
+            <a href="contact.html">contact</a>
+        </nav>
+
+
+        <div class="icons">
+            <a href="products.html" class="fa-solid fa-heart"></a>
+            <a href="products.html" class="fa-solid fa-shopping-cart"></a>
+            <a href="Organicfoods.html" class="fa-solid fa-user"></a>
+        </div>
+    </header>
+
+
+    <section class="contact" id="contact">
+        <h1 class="heading"><span> contact </span> us </h1>
+        <div class="row">
+            <form action="">
+                <input type="text" placeholder="name" class="box">
+                <input type="email" placeholder="email" class="box">
+                <input type="number" placeholder="number" class="box">
+                <textarea name="" class="box" placeholder="message" id="" cols="30" rows="10"></textarea>
+                <!-- <input type="submit" value="send message" class="btn"> -->
+                <!-- <button type="btn" class="btn">Submit</button> -->
+                <button type="submit" class="btn" onclick="openPopup()">Submit</button>
+        <div class="popup" id="popup">
+            <img src="tick.jpg" alt="">
+            <h2>Thank You!</h2>
+            <p>Your details has been successfully submitted. Thanks!</p>
+            <button type="button" onclick="closePopup()"><a href="Organicfoods.html">OK</a></button>
+        </div>
+            </form>
+            <script>
+                let popup = document.getElementById("popup");
+                function openPopup(){
+                    popup.classList.add("open-popup");
+                }
+                function closePopup(){
+                    popup.classList.remove("close-popup");
+                }
+        </script>
+
+            <div class="image">
+                <img src="contact.jpg" alt="">
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>
